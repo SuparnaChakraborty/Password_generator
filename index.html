@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+
+      </header>
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="range-container">
+              <label for="lengthOption">Length: <span id="rangeValue"></span> characters</label>
+              <input type="range" min="10" max="64" value="12" class="range-slider" id="lengthOption" />
+            </div>
+            <div class="inline-form">
+              <div class="form-group">
+                <input type="checkbox" id="lowercaseOption" checked />
+                <label for="lowercaseOption" title="(a,b,c...)">Lowercase</label>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id="uppercaseOption" checked />
+                <label for="uppercaseOption" title="(A,B,C...)">Uppercase</label>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id="numericOption" checked />
+                <label for="numericOption" title="(1,2,3...)">Numeric</label>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id="specialOption" />
+                <label for="specialOption" title="(%,?,!...)">Special</label>
+              </div>
+            </div>
+          </form>
+          <button id="generate" class="btn">Generate</button>
+          <div class="password-textarea">
+            <i class="gg-copy" id="copyButton" tabindex="0" role="button" title="Copy"></i>
+            <textarea readonly id="password" placeholder="Your Secure Password" area-label="Generated Password">
+              </textarea>
+          </div>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div>
+    <div class="bg-wrapper">
+      <div class="bg-image"></div>
+    </div>
+  </main>
+  <footer>
+    <p>Build with &#129505;|Suparna Chakraborty| © 2023</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
